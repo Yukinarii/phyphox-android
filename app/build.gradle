@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+
+    defaultConfig {
+        applicationId "de.rwth_aachen.phyphox"
+        minSdkVersion 14
+        targetSdkVersion 27
+        versionCode 40
+        versionName "1.0.13"
+        resConfigs "cs", "de", "el", "en", "it", "nl", "pl", "ru"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    configurations {
+        all {
+            exclude module: 'commons-logging'
+        }
+    }
+
+    useLibrary 'org.apache.http.legacy'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'org.apache.poi:poi:3.13'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.google.android.gms:play-services-drive:16.0.0'
+    implementation 'pub.devrel:easypermissions:0.3.0'
+    implementation 'com.google.oauth-client:google-oauth-client-jetty:1.23.0'
+    implementation('com.google.api-client:google-api-client-android:1.23.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+    implementation('com.google.apis:google-api-services-sheets:v4-rev493-1.23.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+}

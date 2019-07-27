@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    background: ###background-color###;
+    color: ###main-color###;
+    font-size: 3vw;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#header {
+    position: absolute;
+    height: 4.5vw;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    white-space: nowrap;
+    background-color: ###highlight-color###;
+    box-shadow: 0 0.4vw 0.4vw rgba(0, 0, 0, 0.1);
+}
+
+#logo {
+    display: inline-block;
+    height: 3.5vw;
+    margin: 0.5vw;
+    vertical-align: middle;
+}
+
+#buttons {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#buttons > div {
+    display: inline-block;
+    background-color: ###highlight-color###;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 80%;
+    padding: 0.5vw;
+    min-width: 3.5vw;
+    height: 3.5vw;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+#measuring {
+    background-image: url(data:image/png;base64,###drawablePlay###);
+}
+
+.countdown #measuring {
+    background-image: url(data:image/png;base64,###drawableTimedPlay###);
+}
+
+.active #measuring {
+    background-image: url(data:image/png;base64,###drawablePause###);
+}
+
+.countdown.active #measuring {
+    background-image: url(data:image/png;base64,###drawableTimedPause###);
+}
+
+#clear {
+    background-image: url(data:image/png;base64,###drawableClearData###);
+}
+
+#buttons > #countdown {
+    cursor: default;
+    min-width: 0;
+}
+
+#buttons > #countdown:empty {
+    padding: 0;
+    width: 0;
+
+}
+
+#more {
+    background-image: url(data:image/png;base64,###drawableMore###);
+}
+
+#moreMenu {
+    position: absolute;
+    display: block;
+    right: 0.2vw;
+    top: 0.2vw;
+    box-shadow: 0 0.8vw 0.8vw rgba(0, 0, 0, 0.1);
+    z-index: 2000;
+    background: ###background2-color###;
+    font-size: 1.5vw;
+}
+
+#moreMenu li {
+    padding: 1vw;
+}
+
+#moreMenu li:hover {
+    background: ###background2hover-color###;
+}
+
+#moreMenu #clear {
+    color: #ff4040;
+}
+
+.columns1 #switchColumns1, .columns2 #switchColumns2, .columns3 #switchColumns3, .phone #switchToPhoneLayout {
+    display: none;
+}
+
+#titleBar {
+    display: inline-block;
+    padding: 0.5vw;
+    height: 3.5vw;
+    vertical-align: middle;
+}
+
+#title {
+    height: 3.5vw;
+    font-size: 3.0vw;
+    display: block;
+    background: ###highlight-color###;
+    padding: 0;
+}
+
+#viewSelectorBar {
+    display: none;
+}
+
+.multiView #viewSelectorBar {
+    display: block;
+    position: absolute;
+    top: 4.5vw;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0.2vw 0.2vw rgba(0, 0, 0, 0.1);
+    background: ###background2-color###;
+    height: 3.5vw;
+    z-index: 500;
+    font-size: 1.5vw;
+    line-height: 1;
+}
+
+#viewSelector li {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 1vw;
+    cursor: pointer;
+}
+
+#viewSelector li:hover {
+    background: ###background2hover-color###;
+}
+
+#viewSelector li.active {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 1vw 1vw 0.75vw 1vw;
+    border-bottom: 0.25vw solid ###highlight-color###;
+}
+
+#views {
+    position: absolute;
+    top: 4.5vw;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    padding-top: 1vw;
+}
+
+.multiView #views {
+    top: 8vw;
+}
+
+.elementBlock {
+    display: inline-block;
+    width: 100%;
+}
+
+.columns2 .elementBlock {
+    display: inline-block;
+    width: 50%;
+    font-size: 50%;
+}
+
+.columns3 .elementBlock {
+    display: inline-block;
+    width: 33%;
+    font-size: 33%;
+}
+
+.phone .elementBlock {
+    margin: auto;
+    display: block;
+    width: 57vh;
+    font-size: 2.5vh;
+}
+
+.valueElement, .editElement {
+    display: block;
+    width: 100%;
+}
+
+.label {
+    display: inline-block;
+    text-align: right;
+    width: 49%;
+    padding: 0.5%;
+}
+
+.value {
+    display: inline-block;
+    font-weight: bold;
+    width: 49%;
+    padding: 0.5%;
+}
+
+.unit {
+    font-weight: bold;
+    padding: 0 0.5%;
+}
+
+.editElement .value {
+    font-size: 100%;
+    width: 15%;
+    padding: 0 0.5%;
+}
+
+.graphElement {
+    display: block;
+    width: 80%;
+    margin: 0 10%;
+}
+
+.phone .graphElement {
+    width: 100%;
+    margin: 0;
+}
+
+.graphElement .label {
+    display: block;
+    width: 99%;
+    font-weight: bold;
+    padding: 0.5%;
+    text-align: left;
+}
+
+.graphElement .graphBox {
+    position: relative;
+    width: 100%;
+}
+
+.graphElement .graphRatio {
+    display: block;
+}
+
+.graphElement .graph {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.infoElement {
+    margin: 1% 2%;
+    font-size: smaller;
+}
+
+.buttonElement {
+    text-align: center;
+}
+
+.buttonElement button {
+    font-size: 100%;
+    background: ###background2-color###;
+    color: ###main-color###;
+    padding: 0 0.5%;
+    margin: 0.5% auto;
+}
+
+.buttonElement button:hover {
+    font-size: 100%;
+    background: ###background2hover-color###;
+    color: ###main-color###;
+}
+
+.tickLabel, .axisLabels {
+    color: ###main-color###;
+}
+
+.axisLabels {
+    font-size: smaller;
+}
+
+#error {
+    z-index: 10000;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #800000;
+    border-top: 1px solid #ff0000;
+    display: none;
+    text-align: center;
+}
+
+#exportDialog {
+    z-index: 5000;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 15vh;
+    text-align: center;
+}
+
+#exportDialog form {
+    box-shadow: 0 0.4vw 0.4vw rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    background: ###background2-color###;
+    text-align: left;
+    padding: 1%;
+}
+
+#exportDialog form .setSelector {
+    display: block;
+}
+
+#exportDialog form select {
+    display: block;
+    margin: 3px 0;
+}
+
+#exportDialog form input {
+    display: inline-block;
+}

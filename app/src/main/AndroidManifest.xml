@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="de.rwth_aachen.phyphox"
+    android:installLocation="auto">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:persistent="true"
+        android:theme="@style/phyphox">
+        <activity
+            android:name=".ExperimentList"
+            android:label="@string/app_name"
+            android:screenOrientation="unspecified"
+            android:theme="@style/splashTheme">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".Experiment"
+            android:label="@string/title_activity_experiment"
+            android:launchMode="singleTop"
+            android:parentActivityName=".ExperimentList"
+            android:theme="@style/phyphox"> <!-- //CCRG walking fix -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="de.rwth_aachen.phyphox.ExperimentList" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="*"
+                    android:mimeType="*/*"
+                    android:pathPattern=".*\\.phyphox"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:mimeType="*/*"
+                    android:pathPattern=".*\\..*\\.phyphox"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:mimeType="*/*"
+                    android:pathPattern=".*\\..*\\..*\\.phyphox"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:mimeType="*/*"
+                    android:pathPattern=".*\\..*\\..*\\..*\\.phyphox"
+                    android:scheme="file" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="phyphox" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="*"
+                    android:mimeType="application/octet-stream"
+                    android:pathPattern=".*"
+                    android:scheme="content" />
+                <data
+                    android:host="*"
+                    android:mimeType="text/plain"
+                    android:pathPattern=".*"
+                    android:scheme="content" />
+                <data
+                    android:host="*"
+                    android:mimeType="text/xml"
+                    android:pathPattern=".*"
+                    android:scheme="content" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="de.rwth_aachen.phyphox.exportProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/export_provider" />
+        </provider>
+
+        <service android:name=".MyService" /> <!-- //CCRG walking fix -->
+        <service
+            android:name=".UploadService"
+            android:enabled="true"
+            android:exported="true"
+            android:stopWithTask="false"></service>
+
+        <service
+            android:name=".UploadIntentService"
+            android:enabled="true"
+            android:exported="true"
+            android:stopWithTask="false">  <!--android:process=":sub"-->
+            <intent-filter>
+                <action android:name=".UploadIntentService"/>
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".UserInfo"
+            android:label="@string/title_activity_user_info"
+            android:theme="@style/phyphox">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

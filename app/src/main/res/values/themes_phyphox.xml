@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="phyphox" parent="Theme.AppCompat.NoActionBar">
+
+        <item name="android:textColor">@color/mainExp</item>
+        <item name="android:textColorPrimary">@color/mainExp</item>
+        <item name="android:textColorSecondary">@color/mainExp</item>
+        <item name="colorAccent">@color/highlight</item>
+        <item name="android:colorAccent" tools:ignore="NewApi">@color/highlight</item>
+        <item name="android:textColorHighlight">@color/highlight</item>
+
+        <item name="colorPrimary">@color/phyphox_color</item>
+        <item name="colorPrimaryDark">@color/backgroundExp3</item>
+
+        <item name="android:textSize">@dimen/font</item>
+
+        <item name="alertDialogTheme">@style/phyphoxDialog</item>
+        <item name="dialogTheme">@style/phyphoxDialog</item>
+
+    </style>
+
+    <style name="experimentList" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:textColor">@color/main</item>
+        <item name="android:textColorPrimary">@color/main</item>
+        <item name="android:textColorSecondary">@color/main2</item>
+        <item name="colorAccent">@color/highlight</item>
+        <item name="android:colorAccent" tools:ignore="NewApi">@color/highlight</item>
+        <item name="android:textColorHighlight">@color/highlight</item>
+
+        <item name="colorPrimary">@color/phyphox_color</item>
+        <item name="colorPrimaryDark">@color/background3</item>
+        <item name="android:textSize">@dimen/font</item>
+
+        <item name="alertDialogTheme">@style/phyphoxDialog</item>
+        <item name="dialogTheme">@style/phyphoxDialog</item>
+
+    </style>
+
+    <style name="rwth" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColor">@color/mainDialog</item>
+        <item name="colorPrimary">@color/mainDialog</item>
+        <item name="colorAccent">@color/rwth</item>
+        <item name="alertDialogTheme">@style/rwthDialog</item>
+    </style>
+
+</resources>

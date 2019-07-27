@@ -1,0 +1,6 @@
+<resources>
+
+    <style name="phyphox.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="phyphox.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

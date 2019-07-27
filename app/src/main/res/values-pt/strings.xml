@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources><string name="app_name">phyphox</string>
+    <string name="action_settings">Configurações</string>
+    <string name="title_activity_experiment">phyphox</string>
+
+    <string name="newExperiment">Adicionar experimento simples</string>
+    <string name="newExperimentPhyphoxInfo">Visite phyphox.org para criar outros experimentos incluindo análise de dados e compartilha-los com seus colega, alunos e amigos.</string>
+    <string name="newExperimentInputTitle">Título</string>
+    <string name="newExperimentInputRate">Taxa de leitura do sensor (em Hz, 0 = mais rápido possível)</string>
+    <string name="newExperimentInputSensors">Sensores ativos</string>
+
+    <string name="help">Ajuda e informacões</string>
+    <string name="experimentsPhyphoxOrg">Ideias de experimentos e instruções</string>
+    <string name="experimentsPhyphoxOrgURL">http://phyphox.org/experiments</string>
+    <string name="faqPhyphoxOrg">Perguntas frequentes</string>
+    <string name="faqPhyphoxOrgURL">http://phyphox.org/faq</string>
+    <string name="remotePhyphoxOrg">Ajuda do Acesso remoto</string>
+    <string name="remotePhyphoxOrgURL">http://phyphox.org/remote-control</string>
+    <string name="translationInfo">Idiomas</string>
+    <string name="translationText">Phyphox usa o primeiro idioma disponível da sua lista de idiomas preferidos. Para mudar suas preferências, vá em \"Configurações\" abaixo. Para ver quais idiomas estão disponíveis e ver como você pode nos ajudar, selecione \"Visitar website (em Inglês)\".</string>
+    <string name="translationToSettings">Configurações</string>
+    <string name="donotshowagain">Não mostrar novamente</string>
+    <string name="experimentinfo_hint">Veja informações sobre o experimento para aprender como usá-lo.</string>
+
+<string name="translationToWebsite">Visitar website</string>
+    <string name="translationToWebsiteURL">http://phyphox.org/languages#pt-br</string>
+
+    <string name="info">Informações</string>
+    <string name="creditsRWTH">phyphox foi criado pelo 2º Instituto de Física da Universidade RWTH Aachen.</string>
+    <string name="creditsNames">
+        <![CDATA[
+        Concepção e Desenvolvimento:<br/><b>Dr. Sebastian Staacks</b><br/>Concepção:<br/><b>Prof. Christoph Stampfer</b><br/>Design:<br/><b>Frank Posthoff (A.NikoPol)</b><br/>Programação:<br/><b>Camilla Lummerzheim</b><br/><b>Jonas Gessner</b>
+        ]]>
+    </string>
+    <string name="creditsLibs">A interface-web para acesso remoto usa as bibliotecas JavaScript \"jQuery\" ((c) 2005, 2014 jQuery Foundation, Inc.), \"flot\" ((c) 2007-2014 IOLA e Ole Laursen) e \"Axis Labels Plugin for flot\" ((c) 2010 Xuan Luo), todas disponíveis através da licença MIT.</string>
+    <string name="sensorLinearAcceleration">Aceleração Linear</string>
+    <string name="sensorLight">Luz</string>
+    <string name="sensorGyroscope">Giroscópio</string>
+    <string name="sensorAccelerometer">Acelerômetro</string>
+    <string name="sensorMagneticField">Campo Magnético</string>
+    <string name="sensorPressure">Pressão</string>
+    <string name="sensorTemperature">Temperatura</string>
+    <string name="sensorHumidity">Umidade</string>
+    <string name="sensorProximity">Aproximação</string>
+
+    <string name="location">Localização</string>
+
+    <string name="sensorNotAvailableWarningTitle">Sensor não disponível.</string>
+    <string name="sensorNotAvailableWarningText1">O sensor</string>
+    <string name="sensorNotAvailableWarningText2">não está disponível. Normalmente isto significa que seu dispositivo não possue este tipo de sensor.</string>
+    <string name="sensorNotAvailableWarningMoreInfoURL">http://phyphox.org/faq/#faqMissingSensor</string>
+
+    <string name="ok">OK</string>
+    <string name="close">Fechar</string>
+    <string name="next">Próximo</string>
+    <string name="cancel">Cancelar</string>
+    <string name="unknown">desconhecido</string>
+
+    <string name="sensorNotAvailableWarningMoreInfo">Outras informações</string>
+    <string name="delete">Apagar</string>
+    <string name="confirmDelete">Você deseja apagar este experimento da sua coleção?</string>
+    <string name="stop">Parar</string>
+    <string name="start">Começar</string>
+    <string name="clear_data">Limpar dados</string>
+    <string name="clear_data_question">Limpar dados gravados?</string>
+    <string name="clear">Limpar</string>
+    <string name="loadingTitle">Carregando</string>
+    <string name="loadingText">Carregando experimento…</string>
+
+    <string name="timedRunStartDelay">Atraso inicial (s)</string>
+    <string name="timedRunStopDelay">Duração do experimento (s)</string>
+    <string name="export">Exportar Dados</string>
+    <string name="export_subject">Dados do phyphox</string>
+    <string name="export_pick_share">Escolha um método para exportar</string>
+
+    <string name="share">Compartilhar captura de tela</string>
+    <string name="share_subject">Captura de tela do phyphox</string>
+    <string name="share_pick_share">Escolha um método para compartilhar</string>
+
+    <string name="remoteServer">Permitir acesso remoto</string>
+    <string name="hotspotSettings">Configurações do ponto de acesso</string>
+
+    <string name="newExperimentInputBufferSize">Tamanho do buffer (número de valores guardados)</string>
+    <string name="warning">Aviso</string>
+    <string name="damageWarning">Tome cuidado para não danificar o seu telefone durante os experimentos. Tenha muita atencão para evitar deixar cair sobre superfícies duras e não expor a campos magnéticos fortes. Os autores de phyphox não são responsáveis por qualquer dano ao seu telefone.</string>
+
+    <string name="credits">Ficha técnica</string>
+    <string name="timed_stop">Parar medida temporizada</string>
+    <string name="timed_start">Começar medida temporizada</string>
+
+    <string name="timedRunDialogTitle">Medida temporizada</string>
+    <string name="enableTimedRun">Usar um temporizador para fazer a medida</string>
+
+    <string name="remoteServerWarning">Você está para iniciar o acesso remoto dos dados adquiridos. Faça isso apenas numa rede confiável! Algumas redes de empresas ou universidades podem não permitir o acesso entre os dispositivos.
+\n
+\nPara uma melhor performance e segurança, conecte o dispositivo através de uma opcão de vínculo (ponto de acesso).
+\n
+\nDepois de pressionar ok, você pode acessar suas medidas a partir de qualquer navegador na mesma rede.</string>
+    <string name="remoteServerWarningTitle">Aviso de segurança!</string>
+    <string name="remoteServerActive">Acesso remoto ativado. Acesse este experimento na seguinte URL:
+\n%1$s</string>
+    <string name="calibrated_magnetometer">Usar magnetômetro calibrado</string>
+
+    <string name="show_description">Informacões sobre o experimento</string>
+    <string name="save_locally">Adicionar a coleção de experimentos</string>
+    <string name="save_locally_done">Experimento adicionado a coleção com sucesso.</string>
+    <string name="save_locally_message">Este experimento foi acessado remotamente. Você deseja adicionar ele a sua coleção?</string>
+    <string name="save_locally_button">Salvar na coleção</string>
+    <string name="save_state">Salvar experiência</string>
+    <string name="save_state_category">Experimentos salvos</string>
+    <string name="save_state_message">Você pode salvar este experimento incluindo seus dados para a sua coleção ou compartilhar através de outra app.</string>
+    <string name="save_state_title">Título</string>
+    <string name="save_state_save">Salvar na coleção</string>
+    <string name="save_state_share">Compartilhar</string>
+    <string name="save_state_subject">Experimento do phyphox</string>
+    <string name="save_state_default_title">Medidas</string>
+    <string name="save_state_success">Medidas foram salvas na colecão.</string>
+
+    <string name="timedRun">Medidas temporizadas</string>
+
+    <string name="pick_exportSets">Escolha o conjunto de dados para exportar.</string>
+    <string name="pick_exportFormat">Escolha o formato dos dados.</string>
+
+    <string name="noDrawableData">Dados não disponíveis para visualização.</string>
+
+    <string name="categoryNewExperiment">Experimentos personalizados simples</string>
+    <string name="categoryRawSensor">Sensores</string>
+
+    <string name="confirmDeleteTitle">"Confirmar a eliminação? "</string>
+
+    <string name="switchColumns1">Visualização: 1 coluna</string>
+    <string name="switchColumns2">Visualização: 2 colunas</string>
+    <string name="switchColumns3">Visualização: 3 colunas</string>
+
+    </resources>
